@@ -33,14 +33,17 @@ $db->fillDb();
 
 try{
     
+    if (isset($_POST['username']))
+    {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+      
     $prepared_statement = $db->db->prepare("SELECT * FROM users WHERE username = :username AND password = :password");
-    $prepared_statement->bindValue(':username', 'jacko', PDO::PARAM_STR);
-    $prepared_statement->bindValue(':password', 'qwerty', PDO::PARAM_STR);
-    
-    $prepared_statement->execute();
-    
-    foreach($prepared_statement->fetchAll() as $row) {
-        var_dump($row);
+    $prepared_statement->bindValue(':username', $username, PDO::PARAM_STR);
+    $prepared_statement->bindValue(':password', $password, PDO::PARAM_STR);      
+        $prepared_statement->execute();
+        
+        $user = $prepared_statement->fetch();
     }
     
 } catch (Exception $e) {
@@ -51,3 +54,28 @@ try{
 
 
 ?>
+
+<!doctype>
+<body>
+    <h1>Safe</h1>
+    <?php
+        
+        if (isset($user))
+        {
+            if ($user)
+            {
+                echo "<p>You're now logged in.";
+            }
+            else
+            {
+                echo '<p>Invalid login details.';
+            }
+        }
+        
+    ?>
+    <form method="post">
+        <input type="text" name="username" placeholder="Username">
+        <input type="password" name="password" placeholder="Password">
+        <button type="submit">Login</button>
+    </form>
+</body>

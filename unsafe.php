@@ -27,6 +27,7 @@
 
 <!doctype>
 <body>
+    <h1>Unsafe</h1>
     <?php
         
         if (isset($user))
