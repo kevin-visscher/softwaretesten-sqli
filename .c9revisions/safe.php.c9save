@@ -1,0 +1,12 @@
+{"ts":1378283104382,"silentsave":true,"restoring":false,"patch":[[]],"length":0}
+{"contributors":[],"silentsave":false,"ts":1378283135478,"patch":[[{"diffs":[[1,"<?php\n\n    \n\n?>"]],"start1":0,"start2":0,"length1":0,"length2":15}]],"length":15,"saved":false}
+{"contributors":[],"silentsave":false,"ts":1378283297163,"patch":[[{"diffs":[[0,"hp\n\n    "],[1,"wqeqewqwqwe"],[0,"\n\n?>"]],"start1":3,"start2":3,"length1":12,"length2":23}]],"length":26,"saved":false}
+{"ts":1378283307985,"patch":[[{"diffs":[[0,"qewqwqwe"],[1,"2112321213213213zz"],[0,"\n\n?>"]],"start1":14,"start2":14,"length1":12,"length2":30}]],"length":44,"saved":false}
+{"ts":1378283322934,"patch":[[{"diffs":[[0,"213213zz"],[1," \n    \n    Hello world"],[0,"\n\n?>"]],"start1":32,"start2":32,"length1":12,"length2":34}]],"length":66,"saved":false}
+{"ts":1378283329834,"patch":[[{"diffs":[[0,"lo world"],[1,"dsadasadsasdsda"],[0,"\n\n?>"]],"start1":54,"start2":54,"length1":12,"length2":27}]],"length":81,"saved":false}
+{"contributors":[],"silentsave":false,"ts":1378283331444,"patch":[[{"diffs":[[0,"asdsda\n\n"],[1,"    Jack is lekka!\n"],[0,"?>"]],"start1":71,"start2":71,"length1":10,"length2":29}]],"length":100,"saved":false}
+{"ts":1378283337757,"patch":[[{"diffs":[[0,"    "],[-1,"wqeqewqwqwe2112321213213213zz \n    \n    Hello worlddsadasadsasdsda\n\n    Jack is lekka!"],[0,"\n?>"]],"start1":7,"start2":7,"length1":93,"length2":7}]],"length":14,"saved":false}
+{"ts":1378283351672,"patch":[[{"diffs":[[0,"<?php\n\n"],[1,"double penetration; // ouch\n"],[0,"    \n?>"]],"start1":0,"start2":0,"length1":14,"length2":42}]],"length":42,"saved":false}
+{"ts":1378283361857,"patch":[[{"diffs":[[0,"hp\n\n"],[1,"("],[0,"double"],[-1," "],[1,") $"],[0,"pene"]],"start1":3,"start2":3,"length1":15,"length2":18}]],"length":45,"saved":false}
+{"ts":1378283365133,"patch":[[{"diffs":[[0,"php\n"],[-1,"\n    wqeqewqwqwe2112321213213213zz \n    \n    Hello worlddsadasadsasdsda\n"],[1,"<<<<<<<<< saved version\n\n(double) $penetration; // ouch\n=========\n//Hoerzoen weoqweeqw\ndouble penetration; // ouch\n    \n    $up = new Exception();\n    \n    throw $u\n>>>>>>>>> local versionp;\n    "],[0,"\n?>"]],"start1":2,"start2":2,"length1":79,"length2":202}]],"length":204,"saved":false}
+{"ts":1378283367777,"patch":[[{"diffs":[[0,"throw $u"],[1,"p;"],[0,"\n>>>>>>>"]],"start1":162,"start2":162,"length1":16,"length2":18}]],"length":206,"saved":false}
