@@ -22,6 +22,11 @@
         
         $user = $statement->fetch();
     }
+  
+    if (isset($_GET['myname']))
+    {
+        $myname = $_GET['myname'];
+    }
     
 ?>
 
@@ -42,10 +47,20 @@
             }
         }
         
+        if (isset($myname))
+        {
+            echo '<p>Your name is:', $myname;
+        }
+        
     ?>
     <form method="post">
         <input type="text" name="username" placeholder="Username">
         <input type="password" name="password" placeholder="Password">
         <button type="submit">Login</button>
+    </form>
+    
+    <form method="get">
+        <input type="text" name="myname" placeholder="My name">
+        <button type="submit">Say my name!</button>
     </form>
 </body>

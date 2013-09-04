@@ -38,9 +38,9 @@ try{
         $username = $_POST['username'];
         $password = $_POST['password'];
       
-    $prepared_statement = $db->db->prepare("SELECT * FROM users WHERE username = :username AND password = :password");
-    $prepared_statement->bindValue(':username', $username, PDO::PARAM_STR);
-    $prepared_statement->bindValue(':password', $password, PDO::PARAM_STR);      
+        $prepared_statement = $db->db->prepare("SELECT * FROM users WHERE username = :username AND password = :password");
+        $prepared_statement->bindValue(':username', $username, PDO::PARAM_STR);
+        $prepared_statement->bindValue(':password', $password, PDO::PARAM_STR);      
         $prepared_statement->execute();
         
         $user = $prepared_statement->fetch();
@@ -50,7 +50,10 @@ try{
     var_dump($e);
 }
 
-
+    if (isset($_GET['myname']))
+    {
+        $myname = htmlentities($_GET['myname']);
+    }
 
 
 ?>
@@ -72,10 +75,20 @@ try{
             }
         }
         
+        if (isset($myname))
+        {
+            echo '<p>Your name is:', $myname;
+        }
+        
     ?>
     <form method="post">
         <input type="text" name="username" placeholder="Username">
         <input type="password" name="password" placeholder="Password">
         <button type="submit">Login</button>
+    </form>
+    
+        <form method="get">
+        <input type="text" name="myname" placeholder="My name">
+        <button type="submit">Say my name!</button>
     </form>
 </body>
