@@ -77,8 +77,6 @@ try{
         
         if (isset($myname))
         {
-            echo '<p>Your name is:', htmlspecialchars($myname);
-
             $outputname = preg_replace("/[^a-zA-Z0-9]+/", "", $myname);
             echo '<p>Your name is:', $outputname;
 
