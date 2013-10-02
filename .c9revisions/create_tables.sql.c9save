@@ -1,1 +1,2 @@
 {"ts":1378283785986,"silentsave":true,"restoring":false,"patch":[[]],"length":0}
+{"contributors":[],"silentsave":false,"ts":1380705675058,"patch":[[{"diffs":[[1,"CREATE TABLE users IF NOT EXISTS (\n    id INTEGER primary key,\n    username varchar(255),\n    password varchar(255)\n);\n\nCREATE TABLE messages IF NOT EXIST (\n    id INTEGER PRIMARY KEY,\n    message TEXT\n);"]],"start1":0,"start2":0,"length1":0,"length2":204}]],"length":204,"saved":false}
