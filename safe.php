@@ -77,7 +77,7 @@ try{
         
         if (isset($myname))
         {
-            echo '<p>Your name is:', $myname;
+            echo '<p>Your name is:', htmlspecialchars($myname);
         }
         
     ?>
@@ -87,7 +87,7 @@ try{
         <button type="submit">Login</button>
     </form>
     
-        <form method="get">
+    <form method="get">
         <input type="text" name="myname" placeholder="My name">
         <button type="submit">Say my name!</button>
     </form>
