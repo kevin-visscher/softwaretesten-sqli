@@ -52,7 +52,7 @@ try{
 
     if (isset($_GET['myname']))
     {
-        $myname = htmlentities($_GET['myname']);
+        $myname = $_GET['myname'];
     }
 
 
@@ -77,7 +77,12 @@ try{
         
         if (isset($myname))
         {
+<<<<<<< HEAD
             echo '<p>Your name is:', htmlspecialchars($myname);
+=======
+            $outputname = preg_replace("/[^a-zA-Z0-9]+/", "", $myname);
+            echo '<p>Your name is:', $outputname;
+>>>>>>> c6216af3a67fe65a9c5c1610b018580b5ce544af
         }
         
     ?>
