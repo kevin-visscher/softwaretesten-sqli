@@ -88,7 +88,7 @@
     <!-- XSS vunlerable register form -->
     <form method="post">
         <textarea name="message" cols="40" rows="10"></textarea>
-        <button type="submit" style="font-size:32px;">Ja hoor. Plaatst u aub mijn bericht</button>
+        <button type="submit" style="font-size:24px;">Ja hoor. Plaatst u aub mijn bericht</button>
     </form>
     
     <h2>Messages</h2>

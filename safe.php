@@ -54,6 +54,21 @@ try{
     {
         $myname = $_GET['myname'];
     }
+    
+    if (isset($_POST['message']))
+    {
+        $message = strip_tags($_POST['message']);
+        
+        $prepared_statement = $db->db->prepare("INSERT INTO messages (message) values (:message)");
+        $prepared_statement->bindValue(':message', $message, PDO::PARAM_STR);
+        $prepared_statement->execute();
+        
+        // $db->db->exec("INSERT INTO messages (message) VALUES ('$message')");
+    }
+    
+    // Retrieve messages
+    $messagesStatement = $db->db->query('SELECT * FROM messages');
+    $messages = $messagesStatement->fetchAll();
 
 
 ?>
@@ -93,4 +108,18 @@ try{
         <input type="text" name="myname" placeholder="My name">
         <button type="submit">Say my name!</button>
     </form>
+    
+    <h2>Safe message form</h2>
+    <!-- XSS protected register form -->
+    <form method="post">
+        <textarea name="message" cols="40" rows="10"></textarea>
+        <button type="submit" style="font-size:24px;">Ja hoor. Plaatst u aub mijn bericht</button>
+    </form>
+    
+    <h2>Messages</h2>
+    <?php foreach ($messages as $m) : ?>
+    <?php echo strip_tags($m['message']); ?>
+    <hr>
+    <?php endforeach; ?>
+    
 </body>
